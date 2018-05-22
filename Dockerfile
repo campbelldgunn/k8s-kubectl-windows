@@ -4,7 +4,7 @@
 FROM microsoft/windowsservercore:latest
 
 LABEL maintainer="Campbell Gunn <campbelldgunn@gmail.com>" `
-      org.label-schema.schema-version="v1.8.0" `
+      org.label-schema.schema-version="v1.10.2" `
       org.label-schema.name="Windows Kubectl Client"
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
@@ -17,7 +17,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF `
       org.label-schema.vcs-url="https://github.com/campbelldgunn/k8s-kubectl-windows" `
       org.label-schema.build-date=$BUILD_DATE
       
-ENV KUBE_LATEST_VERSION="v1.8.0"
+ENV KUBE_LATEST_VERSION="v1.10.2"
 
 RUN mkdir 'C:\Program Files\kubectl'
 
